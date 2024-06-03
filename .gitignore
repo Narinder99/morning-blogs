@@ -1,0 +1,35 @@
+# Dependency directories
+node_modules/
+
+# Next.js build output
+.next/
+.contentlayer/
+out/
+
+# Production environment variables
+.env
+.env.local
+.env.example
+.env.*.local
+
+# Log files
+logs/
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE and editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Testing-related files
+coverage/
+*.lcov
+
+# Temporary files
+*.swp
+*.tmp
