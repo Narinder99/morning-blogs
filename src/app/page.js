@@ -10,8 +10,8 @@ export default function Home() {
     <main className="flex flex-col items-center justify-center">
       <OneLineSlogan />
       <HomeCoverSection blogs={allBlogs} />
-      <FeaturedPosts blogs={allBlogs} />
-      {/* <RecentPosts blogs={allBlogs} /> */}
+      {/* <FeaturedPosts blogs={allBlogs} /> */}
+      <RecentPosts blogs={allBlogs} />
 
 
     </main>
