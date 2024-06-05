@@ -17,7 +17,7 @@ const Footer = () => {
   return (
     <footer className="mt-10 bg-red-200 flex flex-col md:flex-row justify-center items-center py-20">
 
-      <div className="md:w-1/2 px-4 xs:px-10 md:px-8 lg:px-14 xl:px-20">
+      <div className="md:w-1/2 px-4 xs:px-10 sm-px-14 md:px-8 lg:px-14 xl:px-20">
       <p className="text-black text-center font-sans text-2xl">Stay up to date with our latest technology news.</p>
       <p className="text-neutral-800 text-center font-sans text-sm mt-4">Enjoy latest blogs from us. We cover compliance knowledge, tips, industry updates and technology.</p>
       <div className="bg-white rounded-full flex justify-between mt-4 mx-4 items-center">
@@ -34,7 +34,7 @@ const Footer = () => {
 <div className="mt-10 md:hidden w-full bg-white h-1"></div>
 <div className="mt-10 md:mt-0 md:w-1/2 flex flex-row">
   <div className="bg-white w-0 md:w-2"></div>
-  <div className="px-4 xs:px-10 md:px-8 lg:px-14 xl:px-20">
+  <div className="px-4 xs:px-10 sm:px-10 md:px-8 lg:px-14 xl:px-20">
   <p className="text-black text-center font-sans text-2xl">Share your ideas!</p>
   <p class="text-base text-black font-sans text-md mt-4">
   We'd love to hear your <span class="font-semibold">suggestions</span> for 
