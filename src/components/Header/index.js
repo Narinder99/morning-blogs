@@ -22,7 +22,7 @@ const Header = () => {
     setClick(!click);
   };
   return (
-    <header className="w-full p-2 px-5 flex sm:px-10 items-center">
+    <header className="w-full p-2 px-5 flex justify-between sm:justify-normal sm:px-10 items-center">
       <Logo />
       <button
         className="inline-block mr-5 sm:hidden z-50"
@@ -63,9 +63,44 @@ const Header = () => {
         </div>
       </button>
 
-      <div className="w-full flex justify-center items-center">
+      <div
+        className={`fixed top-12 px-4 rounded-bl-md right-0  flex sm:hidden  flex-col justify-center items-center bg-white dark:bg-dark transition-all duration-500 ${
+          click ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
+      >
         <nav
-          className="py-3 px-6 font-medium text-md capitalize items-center sm:flex hidden bg-white text-black dark:bg-dark dark:text-white backdrop-blur-sm z-50"
+          className="py-3 px-6 font-medium text-md capitalize items-center flex flex-col bg-white text-black dark:bg-dark dark:text-white backdrop-blur-sm z-50"
+        >
+          <Link href="/" className="mb-2 border-b-2 border-b-neutral-600">
+            Home
+          </Link>
+          <Link href="/about" className="mb-2 border-b-2 border-b-neutral-600">
+            About
+          </Link>
+          <Link href="/contact" className="mb-2 border-b-2 border-b-neutral-600">
+            Contact
+          </Link>
+          <button
+            onClick={() => setMode(mode === "light" ? "dark" : "light")}
+            className={cx(
+              "w-6 h-6 ease ml-2 flex items-center justify-center rounded-full p-1",
+              mode === "light" ? "bg-dark text-light" : "bg-light text-dark"
+            )}
+            aria-label="theme-switcher"
+          >
+            {mode === "light" ? (
+              <MoonIcon className={"fill-dark"} />
+            ) : (
+              <SunIcon className={"fill-dark"} />
+            )}
+          </button>
+        </nav>
+      </div>
+
+
+      <div className="w-full hidden sm:flex justify-center items-center ">
+        <nav
+          className="py-3 px-6 font-medium text-md capitalize items-center flex bg-white text-black dark:bg-dark dark:text-white backdrop-blur-sm z-50"
         >
           <Link href="/" className="mr-2">
             Home
