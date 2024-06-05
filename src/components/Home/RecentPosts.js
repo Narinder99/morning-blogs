@@ -26,7 +26,7 @@ const RecentPosts = ({ blogs }) => {
         <div className="col-span-1 row-span-1 relative flex justify-start items-center">
         <Link
           href="/categories/all"
-          className="w-fit h-fit font-mono rounded-md ml-2 px-4 py-2 bg-slate-200 text-black dark:bg-dark dark:text-white">
+          className="w-fit h-fit font-mono rounded-md ml-2 px-4 py-2 bg-slate-200 text-black dark:bg-neutral-700 dark:text-white">
           View all  -&gt;
         </Link>
             </div>

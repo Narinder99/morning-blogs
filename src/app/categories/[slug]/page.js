@@ -1,5 +1,7 @@
 import { allBlogs } from "@/.contentlayer/generated";
+import BlogLayoutOne from "@/src/components/Blog/BlogLayoutOne";
 import BlogLayoutThree from "@/src/components/Blog/BlogLayoutThree";
+import BlogLayoutTwo from "@/src/components/Blog/BlogLayoutTwo";
 import Categories from "@/src/components/Blog/Categories";
 import GithubSlugger, { slug } from "github-slugger";
 
