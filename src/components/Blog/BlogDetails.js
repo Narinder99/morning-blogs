@@ -6,17 +6,17 @@ import ViewCounter from "./ViewCounter";
 
 const BlogDetails = ({ blog, slug: blogSlug }) => {
   return (
-    <div className="px-2  md:px-10 bg-accent dark:bg-accentDark text-light dark:text-dark py-2 flex items-center justify-around flex-wrap text-lg sm:text-xl font-medium mx-5  md:mx-10 rounded-lg">
-      <time className="m-3">
+    <div className="text-dark dark:text-light py-2 flex items-center justify-start flex-wrap text-sm sm:text-md font-medium mt-4">
+      <time className="m-3 text-neutral-500">
         {format(parseISO(blog.publishedAt), "LLLL d, yyyy")}
       </time>
-      <span className="m-3">
+      {/* <span className="m-3">
         <ViewCounter slug={blogSlug} />
-      </span>
-      <div className="m-3">{blog.readingTime.text}</div>
-      <Link href={`/categories/${slug(blog.tags[0])}`} className="m-3">
-        #{blog.tags[0]}
-      </Link>
+      </span> */}
+      <div className="border-l-2 border-neutral-500  my-3 px-3">{blog.readingTime.text}</div>
+      {/* <Link href={`/categories/${slug(blog.tags[0])}`} className="m-3">
+        {blog.tags[0]}
+      </Link> */}
     </div>
   );
 };

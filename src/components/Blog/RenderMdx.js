@@ -20,9 +20,7 @@ const RenderMdx = ({blog}) => {
     prose-blockquote:border-accent
     prose-blockquote:not-italic
     prose-blockquote:rounded-r-lg
-
     prose-li:marker:text-accent
-
     dark:prose-invert
     dark:prose-blockquote:border-accentDark
     dark:prose-blockquote:bg-accentDark/20
@@ -31,8 +29,6 @@ const RenderMdx = ({blog}) => {
     first-letter:text-3xl
     sm:first-letter:text-5xl
     
-
-
     '> 
         <MDXContent components={mdxComponents}/>
     </div>

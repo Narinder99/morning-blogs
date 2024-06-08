@@ -15,7 +15,7 @@ const Footer = () => {
   console.log(errors);
 
   return (
-    <footer className="mt-10 bg-red-200 flex flex-col md:flex-row justify-center items-center py-20">
+    <footer className="mt-10 bg-red-100 flex flex-col md:flex-row justify-center items-center py-20">
 
       <div className="md:w-1/2 px-4 xs:px-10 sm-px-14 md:px-8 lg:px-14 xl:px-20">
       <p className="text-black text-center font-sans text-2xl">Stay up to date with our latest technology news.</p>
@@ -36,15 +36,15 @@ const Footer = () => {
   <div className="bg-white w-0 md:w-2"></div>
   <div className="px-4 xs:px-10 sm:px-10 md:px-8 lg:px-14 xl:px-20">
   <p className="text-black text-center font-sans text-2xl">Share your ideas!</p>
-  <p class="text-base text-black font-sans text-md mt-4">
-  We'd love to hear your <span class="font-semibold">suggestions</span> for 
+  <p className="text-base text-black font-sans text-md mt-4">
+  We'd love to hear your <span className="font-semibold">suggestions</span> for 
   <span className="font-semibold text-lg"> blog topics </span>,
   <span className="font-semibold text-lg"> technology reviews </span>, 
   <span className="font-semibold text-lg"> tips and tricks </span>, 
  or anything else you'd like us to cover. Let us know what 
   <span className="font-semibold text-lg"> interests you!</span>
     </p>
-<textarea id="suggestion" rows="2" placeholder="Suggestion" class="w-full mt-4 p-2 rounded-md border-none focus:ring-0"></textarea>
+<textarea id="suggestion" rows="2" placeholder="Suggestion" className="w-full mt-4 p-2 rounded-md border-none focus:ring-0"></textarea>
 <div className="flex justify-end mt-2">
 <div className="text-white flex px-4 h-8 rounded-full bg-red-600 items-center justify-center hover:cursor-pointer ">Submit</div>
 </div>

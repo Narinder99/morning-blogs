@@ -1,21 +1,21 @@
 // please update required information
 const siteMetadata = {
-    title: 'Next.js Blog With Tailwind CSS and Contentlayer',
-    author: 'CodeBucks',
+    title: 'BrainBite',
+    author: 'Narinder Singh',
     headerTitle: 'Next.js Blog',
-    description: 'A blog created with Next.js, Tailwind.css and contentlayer.',
+    description: 'Blogs which cover compliance knowledge, tips, industry updates and technology.',
     language: 'en-us',
     theme: 'system', // system, dark or light
     siteUrl: 'https://create-blog-with-nextjs.vercel.app', // your website URL
     siteLogo: '/logo.png',
-    socialBanner: '/social-banner.png', // add social banner in the public folder
-    email: 'codebucks27@gmail.com', 
-    github: 'https://github.com/codebucks27',
-    twitter: 'https://twitter.com/code_bucks',
-    facebook: 'https://facebook.com',
-    youtube: 'https://youtube.com/codebucks',
-    linkedin: 'https://www.linkedin.com/in/codebucks/',
-    dribbble: 'https://www.dribbble.com',
+    //socialBanner: '/social-banner.png', // add social banner in the public folder
+    email: '', 
+    github: '',
+    twitter: '',
+    facebook: '',
+    youtube: '',
+    linkedin: '',
+    dribbble: '',
     locale: 'en-US',
   }
   

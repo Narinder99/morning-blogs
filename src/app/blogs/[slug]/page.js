@@ -6,6 +6,7 @@ import { allBlogs } from "contentlayer/generated";
 import { slug } from "github-slugger";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 export async function generateStaticParams() {
   return allBlogs.map((blog) => ({ slug: blog._raw.flattenedPath }));
@@ -95,7 +96,7 @@ export default function BlogPage({ params }) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
        <article>
-      <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
+      {/* <div className="mb-8 text-center relative w-full h-[70vh] bg-dark">
         <div className="w-full z-10 flex flex-col items-center justify-center absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
           <Tag
             name={blog.tags[0]}
@@ -120,11 +121,11 @@ export default function BlogPage({ params }) {
           priority
           sizes="100vw"
         />
-      </div>
-      <BlogDetails blog={blog} slug={params.slug} />
+      </div> */}
+      
 
-      <div className="grid grid-cols-12  gap-y-8 lg:gap-8 sxl:gap-16 mt-8 px-5 md:px-10">
-        <div className="col-span-12  lg:col-span-4">
+      <div className="flex flex-col mt-8 px-4 sm:px-14 md:px-28 lg:px-48">
+        {/* <div className="col-span-12  lg:col-span-4">
           <details
             className="border-[1px] border-solid border-dark dark:border-light text-dark dark:text-light rounded-lg p-4 sticky top-6 max-h-[80vh] overflow-hidden overflow-y-auto"
             open
@@ -159,7 +160,17 @@ export default function BlogPage({ params }) {
               })}
             </ul>
           </details>
-        </div>
+        </div> */}
+
+        <p className="text-black dark:text-white text-2xl md:text-3xl lg:text-4xl">{blog.title} 
+          <span className="">
+          <Link href={`/categories/${slug(blog.tags[0])}`} className="text-neutral-500  text-xs sm:text-sm ml-2">
+        {blog.tags[0]}
+      </Link>
+          </span>
+          
+        </p>
+        <BlogDetails blog={blog} slug={params.slug} />
         <RenderMdx blog={blog} />
       </div>
     </article>

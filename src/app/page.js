@@ -7,7 +7,7 @@ import OneLineSlogan from "../components/Home/OneLineSlogan";
 export default function Home() {
   
   return (
-    <main className="flex flex-col items-center justify-center">
+    <main className="flex flex-col items-center justify-center mb-4">
       <OneLineSlogan />
       <HomeCoverSection blogs={allBlogs} />
       {/* <FeaturedPosts blogs={allBlogs} /> */}

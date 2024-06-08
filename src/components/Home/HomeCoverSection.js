@@ -14,16 +14,22 @@ const HomeCoverSection = ({blogs}) => {
     <div className="w-full bg-gray-100 flex justify-center items-center bg-white dark:bg-dark">
     <div className="flex flex-col pt-8 xs:flex-row px-8 xs:px-10 sm:px-18 md:px-24 xl:px-64">
         <div className="xs:w-1/2 xs:m-1 sm:m-2 md:m-4">
-            <img src="https://fastly.picsum.photos/id/7/4728/3168.jpg?hmac=c5B5tfYFM9blHHMhuu4UKmhnbZoJqrzNOP9xjkV4w3o" alt="Blog image" class="rounded-lg w-full h-auto object-cover"/>
+            <Image           
+        src={blog.image.filePath.replace("../public", "")}
+          placeholder="blur"
+          blurDataURL={blog.image.blurhashDataUrl}
+          alt={blog.title}
+          width={blog.image.width}
+          height={blog.image.height} className="rounded-lg w-full h-auto object-cover"/>
         </div>
         <div className="xs:w-1/2 pl-4 flex flex-col justify-center">
             <div className="text-gray-500 dark:text-white dark:bg-dark mb-2">
-                <span>23-08-2023</span>
-                <span className="ml-4">4 Mins Read</span>
+                <span>{format(parseISO(blog.publishedAt), "LLLL d, yyyy")}</span>
+                <span className="ml-4">{blog.readingTime.text}</span>
             </div>
-            <h2 className="text-2xl dark:text-white dark:bg-dark font-bold mb-2">How to write a good prompt for ChatGPT</h2>
-            <p className="text-gray-700  dark:text-white dark:bg-dark mb-4">ChatGPT saves you a lot of time creating content. Let's talk about how to make a good prompt for ChatGPT.</p>
-            <a href="#" className="w-fit bg-black text-white dark:text-black dark:bg-white px-4 py-2 rounded-lg text-center">Read This Blog</a>
+            <h2 className="text-2xl dark:text-white dark:bg-dark font-bold mb-2">{blog.title}</h2>
+            <p className="text-gray-700  dark:text-white dark:bg-dark mb-4">{blog.title}.</p>
+            <Link href={blog.url} className="w-fit bg-black text-white dark:text-black dark:bg-white px-4 py-2 rounded-lg text-center">Read This Blog</Link>
         </div>
     </div>
 </div>

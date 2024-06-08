@@ -1,14 +1,16 @@
 import Image from "next/image"
 import Link from "next/link"
-import profileImg from "@/public/profile-img.png"
+import darkLogo from "@/public/black_logo_ts.png"
+import lightLogo from "@/public/white_logo_ts.png"
 
 const Logo = () => {
   return (
     <Link href="/" className="flex items-center text-dark dark:text-light">
-        <div className=" w-12 md:w-16 rounded-full overflow-hidden border border-solid border-dark dark:border-gray  mr-2 md:mr-4">
-            <Image src={profileImg} alt="CodeBucks logo" className="w-10 h-10 rounded-full" sizes="10vw" priority />
+        <div className="w-10 md:w-12 overflow-hidden mr-1 md:mr-2">
+            <Image src={darkLogo} alt="BrainBite logo" className="w-full dark:hidden rounded-full" sizes="10vw" priority />
+            <Image src={lightLogo} alt="BrainBite logo" className="w-full hidden dark:flex rounded-full" sizes="10vw" priority />
         </div>
-        <span className="font-bold dark:font-semibold text-lg md:text-xl">Morning</span>
+        <span className="font-bold dark:font-semibold text-lg md:text-xl">BrainBite</span>
     </Link>
   )
 }
